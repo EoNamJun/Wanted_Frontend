@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand-color: #2ac1bc;
+  --border-color: #ced4da;
+  --base-background-color: #eee;
+  --danger-color: #bb2d3b;
+}
+.Backdrop {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+}
+.Dialog {
+  background-color: #fff;
+  border-radius: 8px;
+  display: flex;
+  flex-flow: column;
+  padding: 16px;
+  position: relative;
+  z-index: 1100;
+}
+.Dialog > header {
+  font-size: 1.3rem;
+  font-weight: 700;
+  padding-bottom: 1rem;
+}
+.Dialog > main {
+  flex: 1 1;
+  max-height: 200px;
+  min-height: 40px;
+  overflow-y: scroll;
+}
+.Dialog > footer {
+  padding-top: 1rem;
+}
+
+/* .Button {
+  background-color: transparent;
+  border: 1px solid #ced4da;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 8px;
+} */
+.Button:focus,
+.Button:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.Button.brand {
+  border: 1px solid #2ac1bc;
+  border: 1px solid var(--brand-color);
+  color: #2ac1bc;
+  color: var(--brand-color);
+}
+.Button.brand-solid,
+.Button.brand:focus,
+.Button.brand:hover {
+  background-color: #2ac1bc;
+  background-color: var(--brand-color);
+  color: #fff;
+}
+.Button.brand-solid {
+  border: 1px solid #2ac1bc;
+  border: 1px solid var(--brand-color);
+}
+
+.Button.danger {
+  border: 1px solid #bb2d3b;
+  border: 1px solid var(--danger-color);
+  color: #bb2d3b;
+  color: var(--danger-color);
+}
+.Button.danger-solid,
+.Button.danger:focus,
+.Button.danger:hover {
+  background-color: #bb2d3b;
+  background-color: var(--danger-color);
+  color: #fff;
+}
+.Button.danger-solid {
+  border: 1px solid #bb2d3b;
+  border: 1px solid var(--danger-color);
+}
+
+.Button.block {
+  width: 100%;
+}
